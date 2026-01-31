@@ -100,7 +100,7 @@ header::after {
     border-radius: 30px;
     padding: 10px 10px;
     cursor: pointer;
-    background: #41835ab8;
+    background: #1b512f;
     color: #fff;
     font-size: x-large;
 }
@@ -159,6 +159,12 @@ header::after {
     padding-left: 10px;
     margin-bottom: 4px;
 }
+
+.job:hover{
+    background: rgba(250,204,21, 0.35);
+    box-shadow: 0 0 25px rgba(250,204,21, 0.35);
+}
+
 
 .badge{
     background:var(--badgecolor);
@@ -263,8 +269,9 @@ footer{
     }
 
     header {
-        background: #16a34a !important;
+        background: linear-gradient(135deg, #0b7f36, #22c55e29) !important;
         color: #fff !important;
+        padding-left: 75px
     }
 
     header::after {
@@ -278,6 +285,11 @@ footer{
         background: #fff !important;
         border: 1px solid #ddd;
         page-break-inside: avoid;
+    }
+
+    header h2 {
+        color: #fff !important;
+        font-size: 1.95em;
     }
 
     h2 {

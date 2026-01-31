@@ -227,39 +227,75 @@ footer{
 
 
 }
-@media print{
-    .grid{grid-template-columns:1fr 2fr}
-    @page{size:A4;margin: 8mm}
 
-    body{
-        background:#fff !important;
-        color:#000!important;
+@media print {
+
+    @page {
+        size: A4;
+        margin: 10mm;
     }
 
-    body.dark{
+    * {
+        animation: none !important;
+        box-shadow: none !important;
+    }
+
+    body,
+    body.dark {
         background: #fff !important;
+        color: #000 !important;
     }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 2fr !important;
+    }
+
+    header {
+        background: #16a34a !important;
+        color: #fff !important;
+    }
+
     header::after {
-        right: 60px;
-        bottom: 0px;
-        content: "👩🏾‍⚕️";
-        font-size: 90px;
-    }
-    .top,.whats,footer{
         display: none;
     }
 
-    .container{
-        max-width:100%;
-        padding: 0;
-    }
-
-    .card,header{
+    .card {
+        background: #fff !important;
+        border: 1px solid #ddd;
         page-break-inside: avoid;
     }
 
+    h2 {
+        color: #000 !important;
+    }
+
+    .timeline {
+        border-color: #000 !important;
+    }
+
+    .badge {
+        background: #eee !important;
+        color: #000 !important;
+    }
+
+    .job {
+        border-color: #999 !important;
+    }
+
+    .top,
+    .whats,
+    footer,
+    button {
+        display: none !important;
+    }
 
 }
+
 
 </style>
     </head>
@@ -394,4 +430,3 @@ function email(){
 
 </body>
 </html>
-

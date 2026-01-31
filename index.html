@@ -240,6 +240,12 @@ footer{
         box-shadow: none !important;
     }
 
+    body.dark,
+    body.print-light {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
     body,
     body.dark {
         background: #fff !important;
@@ -413,11 +419,10 @@ function toggleTheme(){
     localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light");
 }
 
-function printPDF(){
-    const wasDark=document.body.classList.contains("dark");
-    document.body.classList.remove("dark");
-    window.print();
-    if(wasDark)document.body.classList.add("dark");
+function printPDF() {
+  document.body.classList.add("print-light");
+  window.print();
+  document.body.classList.remove("print-light");
 }
 
 function abrirWhatsapp() {

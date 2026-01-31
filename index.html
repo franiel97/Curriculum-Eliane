@@ -232,7 +232,7 @@ footer{
 
     @page {
         size: A4;
-        margin: 10mm;
+        margin: 8mm !important;
     }
 
     * {
@@ -253,6 +253,7 @@ footer{
 
     .grid {
         grid-template-columns: 1fr 2fr !important;
+        margin: 2px;
     }
 
     header {
@@ -261,7 +262,10 @@ footer{
     }
 
     header::after {
-        display: none;
+        right: 60px;
+        bottom: 0px;
+        content: "👩🏾‍⚕️";
+        font-size: 90px;
     }
 
     .card {
@@ -272,6 +276,7 @@ footer{
 
     h2 {
         color: #000 !important;
+        font-size: 1.2em;
     }
 
     .timeline {
@@ -335,7 +340,7 @@ footer{
     </div>
 
     <div class="card">
-    <h2>🎓 Formação Acadêmica</h2>
+    <h2>🎓 Formação </h2>
         <p>🩺 <strong>Graduação em Enfermagem</strong> – UNINOVE</p>
         <p>🏥 <strong>Pós-graduação em Saúde Pública</strong> – Cléber Leite Educacional</p>
         <p>🧠 <strong>Pós-graduação em Saúde Mental</strong> – DNA Pós-Coren</p>

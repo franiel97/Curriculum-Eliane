@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Currículo — Eliane A. Ferreira</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' font-size='70'>🩺</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+<style>
+
+:root{
+    --primary:#16a34a;
+    --bg:#f0fdf4;
+    --card:#fff;
+    --text:#064e3b;
+    --orange:#f97316;
+    --yellow:#facc15;
+    --badgecolor: #dcfce7;
+    --badgetext: #000;
+
+}
+
+body.dark{
+    --bg:#020617;
+    --card:#171c2f;
+    --text:#e5e7eb;
+    --badgecolor: #facc15;
+    --badgetext: #000;
+}
+
+*{box-sizing:border-box;font-family:Segoe UI}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+
+body p{
+    margin: 5px;
+}
+
+.container{max-width:1200px;margin:auto;padding:15px}
+
+header{
+    background: linear-gradient(135deg, #0b7f36, #22c55e29);
+    color:#fff;
+    padding:25px;
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+    animation:slide .8s ease;
+}
+
+header h1{
+    font-size: 2.4em;
+}
+
+header h2{
+    margin: 5px;
+}
+
+
+@keyframes slide{
+    from{transform:translateY(-30px);opacity:0}
+    to{opacity:1}
+}
+
+header::after {
+    content: "👩🏾‍⚕️ 💉";
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    font-size: 60px;
+    opacity: 0.45;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.1)}
+
+}
+
+.top {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    flex-direction: column;
+    
+}
+
+.top button {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: #41835ab8;
+    color: #fff;
+    font-size: x-large;
+}
+
+.contact{
+	border:2px dashed var(--orange);
+	border-radius:25px;
+	padding:5px;
+	text-align:center;
+	cursor:pointer;
+	font-size: 14px;
+}
+
+.contact:hover{
+    background: rgba(249,115,22,.15);
+    box-shadow: 0 0 15px rgba(249,115,22,.4);
+}
+
+.grid{
+    margin-top:15px;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    border-radius: 25px;
+
+}
+
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    animation:fadeUp .6s ease;
+    margin: 10px;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1}
+}
+
+.card h2{
+    color:#16a34a;
+    margin:0 0 6px;
+}
+
+.timeline{
+    border-left:4px solid #16a34a;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+.job{
+    border:2px dashed var(--yellow);
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-bottom: 4px;
+}
+
+.badge{
+    background:var(--badgecolor);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    padding:6px 10px;
+    border-radius:20px;
+    display:inline-block;
+    margin:4px;
+    font-size: 14px;
+    color:var(--badgetext);
+}
+
+.whats{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#22c55e;
+    color:#fff;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+footer{
+    text-align: center;
+    margin: 25px 5px 0 5px;
+    font-size: 12px;
+}
+
+@media(max-width:800px){
+    .grid{grid-template-columns:1fr}
+    .top{
+        top: auto;
+        bottom: 30px;
+        right: 15px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    header::after {
+        content: "👩🏾‍⚕️ 💉";
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+        font-size: 40px;
+        opacity: 0.45;
+        animation: pulse 3s infinite;
+    }
+
+    header {
+        padding: 15px;
+    }
+    header h1{
+        font-size: 2.4em;
+    }
+    header h2{
+        padding: 5px;
+        font-size: 1.6em;
+    }
+
+
+}
+@media print{
+    .grid{grid-template-columns:1fr 2fr}
+    @page{size:A4;margin: 8mm}
+
+    body{
+        background:#fff !important;
+        color:#000!important;
+    }
+
+    body.dark{
+        background: #fff !important;
+    }
+    header::after {
+        right: 60px;
+        bottom: 0px;
+        content: "👩🏾‍⚕️";
+        font-size: 90px;
+    }
+    .top,.whats,footer{
+        display: none;
+    }
+
+    .container{
+        max-width:100%;
+        padding: 0;
+    }
+
+    .card,header{
+        page-break-inside: avoid;
+    }
+
+
+}
+
+</style>
+    </head>
+
+    <body>
+
+    <div class="top">
+        <button onclick="toggleTheme()">🌓</button>
+        <button onclick="printPDF()">📋</button>
+        <button onclick="abrirWhatsapp()">💬</button>
+    </div>
+
+
+
+    <div class="container">
+
+    <header>
+        <h1>ELIANE ALVES FERREIRA</h1>
+        <p>🚩 Santo André – SP • 🇧🇷 Brasileira • 🎉 1986</p>
+        <h2>Enfermeira do Trabalho</h2>    
+    </header>
+
+        <div class="grid">
+
+    <div>
+
+    <div class="card">
+        <h2>Contatos</h2>
+            
+			<div class="contact" onclick="abrirWhatsapp()"><i class="fa-brands fab fa-whatsapp" style="color: green"></i>  (11) 99209-4587</div><br>
+			<div class="contact" onclick="email()"> <i class="fa-solid fa-envelope" style="color: #ef4444"></i>  eliane_2alves@hotmail.com</div>
+    </div>
+
+    <div class="card">
+        <h2>Objetivo</h2>
+            <span class="badge-yllw">Atuar como Enfermeira com excelência, empatia e responsabilidade.</span>
+    </div>
+
+    <div class="card">
+    <h2>🎓 Formação Acadêmica</h2>
+        <p>🩺 <strong>Graduação em Enfermagem</strong> – UNINOVE</p>
+        <p>🏥 <strong>Pós-graduação em Saúde Pública</strong> – Cléber Leite Educacional</p>
+        <p>🧠 <strong>Pós-graduação em Saúde Mental</strong> – DNA Pós-Coren</p>
+        <p>🦺 <strong>Pós-graduação em Enfermagem do Trabalho</strong> – DNA Pós-Coren</p>
+    </div>
+
+
+
+    <div class="card">
+        <h2>Complementar</h2>
+            <span class="badge">APH RSA Emergências-2015</span>
+            <span class="badge">Simulado SAMU – 2014</span>
+            <span class="badge">Informática Básica (Pacote Office e Internet)</span>
+    </div>
+
+    </div>
+
+    <div>
+    <div class="card">
+    <h2>Perfil</h2>
+    <p>
+    Profissional dedicada, organizada e comprometida com o cuidado humano, com forte senso de responsabilidade, empatia no atendimento e facilidade para trabalhar em equipe, sempre buscando excelência e atualização contínua na área da saúde.
+    </p>
+    </div>
+    <div class="card">
+    <h2>Experiência</h2>
+
+    <div class="timeline">
+        <div class="job">
+        <p><strong>PORTO SEGURO SAÚDE</strong> — Atual (início em Nov/2025)</p>
+            <p><strong>Cargo:</strong> Enfermeira do Trabalho</p>
+                <p>✨ Atuação na promoção da saúde ocupacional, realização de exames admissionais, periódicos e demissionais, acompanhamento de afastamentos, gestão de prontuários, ações preventivas e suporte aos colaboradores, garantindo conformidade com normas de segurança e bem-estar.
+                </p>
+        </div>
+        <div class="job">
+        <p><strong>AMG Saúde</strong> — Jun/2025 à Nov/2025</p>
+            <p><strong>Cargo:</strong> Enfermeira</p>
+                <p>✨ Responsável pela assistência direta aos pacientes, administração de medicamentos, monitoramento clínico, apoio à equipe multidisciplinar e garantia da qualidade no atendimento humanizado.
+                </p>
+        </div>
+        <div class="job">
+        <p><strong>Hospital São Lucas</strong> — Set/2021 à Nov/2021</p>
+            <p><strong>Cargo:</strong> Enfermeira</p>
+                <p>✨ Atuação em ambiente hospitalar, prestando cuidados integrais aos pacientes, realização de procedimentos de enfermagem, controle de sinais vitais e suporte em rotinas assistenciais.
+                </p>
+        </div>
+        <div class="job">
+        <p><strong>RSA Emergências</strong> — Mar/2019 à Jan/2020</p>
+            <p><strong>Cargo:</strong> Enfermeira</p>
+                <p>✨ Atendimento em situações de urgência e emergência, estabilização de pacientes, suporte avançado de vida, atuação em campo e colaboração com equipes médicas em ocorrências críticas.
+            </p>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+    <footer>Desenvolvido por: <a href="https://wa.me/5511992091856?text=$Olá, Franiel Tech!" style="color: #0b7f36;">Franiel.Tech | 2026</a></footer>
+
+    </div>
+
+<script>
+
+const saved = localStorage.getItem("theme");
+    if(saved==="dark")document.body.classList.add("dark");
+
+function toggleTheme(){
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light");
+}
+
+function printPDF(){
+    const wasDark=document.body.classList.contains("dark");
+    document.body.classList.remove("dark");
+    window.print();
+    if(wasDark)document.body.classList.add("dark");
+}
+
+function abrirWhatsapp() {
+	const numero = "5511981103749";
+	const mensagem = encodeURIComponent("Olá, Eliane! Vim através do seu currículo on-line, achei muito interessante! Você está à disposição para propostas de emprego?");
+	const link = `https://wa.me/${numero}?text=${mensagem}`;
+	window.open(link, "_blank");
+}
+
+function email(){
+    window.location.href="mailto:eliane_2alves@hotmail.com@hotmail.com";
+}
+
+</script>
+
+</body>
+</html>
+
